@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidlearning">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".rsvp.RsvpPortalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rsvp.TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rsvp.HappyActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".job.MyJobService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name=".job.JobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".broadcast.BroadActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".broadcast.BroadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AsyncTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".service.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".thread.LooperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".thread.ThreadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".datastorage.SharedPreferencesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".datastorage.DataStorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ToastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".event.EventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment.ContainerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HandlerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.PuRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.GridRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.HorRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.ImageViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.EditTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.LinearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.ButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".widgets.TextViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UIActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.MyBackgroundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".service.MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
