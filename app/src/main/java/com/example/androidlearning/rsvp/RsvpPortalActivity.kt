@@ -19,5 +19,9 @@ class RsvpPortalActivity : AppCompatActivity() {
         btnHappyBirthday.setOnClickListener{
             startActivity(Intent(this, HappyActivity::class.java))
         }
+        val btnAffirmations : Button  = findViewById(R.id.btn_affirmations)
+        btnAffirmations.setOnClickListener{
+            startActivity(Intent(this, AffirmationsActivity::class.java))
+        }
     }
 }

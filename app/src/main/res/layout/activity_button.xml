@@ -7,32 +7,32 @@
     <Button
         android:id="@+id/btn_1"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
+        android:background="#FF0000"
         android:text="btn1"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
 
-        android:background="#FF0000"/>
+        android:textSize="20sp" />
 
 
     <Button
         android:id="@+id/btn_2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="btn2"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/bg_btn_2"
+        android:layout_height="60dp"
         android:layout_below="@+id/btn_1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_2"
+        android:text="btn2"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
 
-        android:layout_marginTop="10dp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_3"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/btn_2"
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_btn_3"
@@ -44,7 +44,7 @@
     <Button
         android:id="@+id/btn_4"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/btn_3"
         android:layout_marginTop="10dp"
         android:background="@drawable/bg_btn_4"
@@ -57,11 +57,11 @@
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textColor="@color/white"
+        android:layout_height="60dp"
+        android:textColor="?colorSecondary"
         android:textSize="20sp"
         android:text="text1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="#FFAD33"
         android:gravity="center"
         android:layout_below="@id/btn_4"/>

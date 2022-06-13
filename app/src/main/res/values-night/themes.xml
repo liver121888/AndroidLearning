@@ -9,8 +9,15 @@
         <item name="colorSecondary">@color/blue_light</item>
         <item name="colorSecondaryVariant">@color/blue_light</item>
         <item name="colorOnSecondary">@color/black</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Text input fields -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <!-- Radio buttons -->
+        <item name="radioButtonStyle">@style/Widget.AndroidLearning.CompoundButton.RadioButton</item>
+        <!-- Switches -->
+        <item name="switchStyle">@style/Widget.AndroidLearning.CompoundButton.Switch</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

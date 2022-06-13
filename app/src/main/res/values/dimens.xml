@@ -2,4 +2,5 @@
 <resources>
     <dimen name="dividerHeight">10dp</dimen>
     <dimen name="dividerHeight2">5dp</dimen>
+    <dimen name="min_text_height">48dp</dimen>
 </resources>

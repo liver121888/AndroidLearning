@@ -59,20 +59,17 @@ public class EventActivity extends AppCompatActivity{
 
         //listener has a higher priority over touch callback
         //100ms
-        BtnMyEvent.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        Log.i("Listener", "on touch");
-                        Intent intent = new Intent(EventActivity.this, ButtonActivity.class);
-                        startActivity(intent);
-                        break;
-                    default:
-                        break;
-                }
-                return false;
+        BtnMyEvent.setOnTouchListener((view, motionEvent) -> {
+            switch (motionEvent.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    Log.i("Listener", "on touch");
+                    Intent intent = new Intent(EventActivity.this, ButtonActivity.class);
+                    startActivity(intent);
+                    break;
+                default:
+                    break;
             }
+            return false;
         });
 
         //listener methods

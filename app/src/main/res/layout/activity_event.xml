@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_my"
-        android:text="MyButton"/>
+        android:text="Goto ButtonActivity"/>
 
     <Button
         android:layout_width="match_parent"
