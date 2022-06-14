@@ -7,11 +7,17 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
-    <activity
+        <activity
+            android:name=".rsvp.wordsapp.WordsAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rsvp.wordsapp.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".rsvp.RsvpPortalActivity"
             android:exported="false" />
         <activity
