@@ -38,22 +38,8 @@ public class ServiceActivity extends AppCompatActivity {
                 startService(bgServiceIntent);
             }
         });
-
-        BtnStopForegroundService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                StopforegroundService();
-            }
-        });
-
-        BtnStopBackgroundService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                StopBackgroundService();
-            }
-        });
-
-
+        BtnStopForegroundService.setOnClickListener(view -> StopforegroundService());
+        BtnStopBackgroundService.setOnClickListener(view -> StopBackgroundService());
     }
 
     // check whether the service is already running, to prevent multiple service

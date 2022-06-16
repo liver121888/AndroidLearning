@@ -1,8 +1,11 @@
 package com.example.androidlearning
 
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -10,13 +13,14 @@ import com.example.androidlearning.databinding.ActivityViewModelBinding
 
 class ViewModelActivity : AppCompatActivity(), LifecycleOwner{
 
+    private val viewModel: ViewModelActivityViewModel by viewModels()
+
     private lateinit var binding : ActivityViewModelBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityViewModelBinding.inflate(layoutInflater)
-        setContentView(binding.getRoot())
-        var viewModel = ViewModelProvider(this).get(ViewModelActivityViewModel::class.java)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_view_model)
+        setContentView(binding.root)
 
         binding.textView.text = viewModel.number.toString();
 

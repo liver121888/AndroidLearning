@@ -37,12 +37,9 @@ public class MyForegroundService extends Service {
             }
 
 
-        new Handler(Looper.getMainLooper()).post(new Runnable() {
-            @Override
-            public void run() {
-                    Log.d(TAG, "MyForegroundService is running");
-                    ToastUtil.showMsg(MyForegroundService.this,"MyForegroundService is running", 0);
-            }
+        new Handler(Looper.getMainLooper()).post(() -> {
+                Log.d(TAG, "MyForegroundService is running");
+                ToastUtil.showMsg(MyForegroundService.this,"MyForegroundService is running", 0);
         });
 
 

@@ -1,5 +1,7 @@
 package com.example.androidlearning.service;
 
+import static androidx.test.internal.runner.junit4.statement.UiThreadStatement.runOnUiThread;
+
 import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
@@ -17,19 +19,24 @@ public class MyBackgroundService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // would be called when startService() or startForegroundService(), in here startService()
-
-        new Handler(Looper.getMainLooper()).post(new Runnable() {
-            @Override
-            public void run() {
+        new Handler(Looper.getMainLooper()).post(() -> {
+            new Thread(() -> {
                 while (true) {
                     Log.d(TAG, "MyBackgroundService is running");
+
+                    try {
+                        runOnUiThread(() -> Toast.makeText(MyBackgroundService.this, "Background service is running.", Toast.LENGTH_SHORT).show());
+                    } catch (Throwable throwable) {
+                        throwable.printStackTrace();
+                    }
+
                     try {
                         Thread.sleep(4000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
-            }
+            }).start();
         });
 
 

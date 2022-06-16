@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidlearning.R
+import com.example.androidlearning.rsvp.unscrambleapp.UnscrambleAppActivity
 import com.example.androidlearning.rsvp.wordsapp.WordsAppActivity
 
 class RsvpPortalActivity : AppCompatActivity() {
@@ -27,6 +28,10 @@ class RsvpPortalActivity : AppCompatActivity() {
         val btnWordsApp : Button  = findViewById(R.id.btn_wordsapp)
         btnWordsApp.setOnClickListener{
             startActivity(Intent(this, WordsAppActivity::class.java))
+        }
+        val btnUnscrambleApp : Button  = findViewById(R.id.btn_unscrambleapp)
+        btnUnscrambleApp.setOnClickListener{
+            startActivity(Intent(this, UnscrambleAppActivity::class.java))
         }
 
     }
