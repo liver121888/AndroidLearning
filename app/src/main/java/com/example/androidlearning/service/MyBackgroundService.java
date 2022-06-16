@@ -19,25 +19,18 @@ public class MyBackgroundService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // would be called when startService() or startForegroundService(), in here startService()
-        new Handler(Looper.getMainLooper()).post(() -> {
-            new Thread(() -> {
-                while (true) {
-                    Log.d(TAG, "MyBackgroundService is running");
-
-                    try {
-                        runOnUiThread(() -> Toast.makeText(MyBackgroundService.this, "Background service is running.", Toast.LENGTH_SHORT).show());
-                    } catch (Throwable throwable) {
-                        throwable.printStackTrace();
-                    }
-
-                    try {
-                        Thread.sleep(4000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        });
+        if (intent.getAction() != null)
+            if (intent.getAction().equals("Stop")) {
+                Log.i(TAG, "Received Stop Background Intent");
+                //your end service code
+                stopForeground(true);
+                stopSelfResult(startId);
+                Log.d(TAG, "MyBackgroundService is stopped");
+                Toast.makeText(this, "MyBackground is stopped", Toast.LENGTH_SHORT).show();
+                return super.onStartCommand(intent, flags, startId);
+            }
+        new Handler(Looper.getMainLooper()).post(() ->
+                Toast.makeText(MyBackgroundService.this, "Background service is running.", Toast.LENGTH_SHORT).show());
 
 
         // this method congest the looper I think, it only toast once

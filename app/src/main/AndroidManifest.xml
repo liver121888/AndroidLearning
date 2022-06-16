@@ -25,7 +25,11 @@
             android:exported="false" />
         <activity android:name=".rsvp.unscrambleapp.UnscrambleAppActivity"
             android:exported="false"
-            android:theme="@style/Theme.Unscramble"/>
+            android:theme="@style/Theme.Unscramble"
+            android:label="@string/unscrambleapp"/>
+        <activity android:name=".rsvp.cupcakeapp.CupcakeAppActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Cupcake"/>
 
         <service
             android:name=".job.MyJobService"
@@ -106,7 +110,7 @@
             android:name=".UIActivity"
             android:exported="false" />
         <activity
-            android:name=".rsvp.AffirmationsActivity"
+            android:name=".rsvp.affirmations.AffirmationsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

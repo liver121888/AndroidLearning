@@ -41,9 +41,7 @@ public class MyForegroundService extends Service {
                 Log.d(TAG, "MyForegroundService is running");
                 ToastUtil.showMsg(MyForegroundService.this,"MyForegroundService is running", 0);
         });
-
-
-
+        return super.onStartCommand(intent, flags, startId);
         //        // would be called when startService() or startForegroundService(), in here startForegroundService() cuz this is a Foreground service
         //        new Thread(new Runnable() {
         //            @Override
@@ -62,7 +60,6 @@ public class MyForegroundService extends Service {
         //                }
         //            }
         //        }).start();
-        return super.onStartCommand(intent, flags, startId);
     }
 
 

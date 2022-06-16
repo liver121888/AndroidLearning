@@ -1,4 +1,4 @@
-package com.example.androidlearning.rsvp
+package com.example.androidlearning.rsvp.affirmations
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
