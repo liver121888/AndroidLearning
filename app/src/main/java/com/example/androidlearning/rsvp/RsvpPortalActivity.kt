@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidlearning.R
+import com.example.androidlearning.rsvp.affirmations.AffirmationsActivity
+import com.example.androidlearning.rsvp.cupcakeapp.CupcakeAppActivity
 import com.example.androidlearning.rsvp.unscrambleapp.UnscrambleAppActivity
 import com.example.androidlearning.rsvp.wordsapp.WordsAppActivity
 
@@ -33,6 +35,9 @@ class RsvpPortalActivity : AppCompatActivity() {
         btnUnscrambleApp.setOnClickListener{
             startActivity(Intent(this, UnscrambleAppActivity::class.java))
         }
-
+        val btnCupcakeApp : Button  = findViewById(R.id.btn_cupcakeapp)
+        btnCupcakeApp.setOnClickListener{
+            startActivity(Intent(this, CupcakeAppActivity::class.java))
+        }
     }
 }
