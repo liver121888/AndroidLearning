@@ -79,5 +79,5 @@
         <item quantity="one">%d cupcake</item>
         <item quantity="other">%d cupcakes</item>
     </plurals>
-
+    <string name="mars_photos">Mars Photos</string>
 </resources>

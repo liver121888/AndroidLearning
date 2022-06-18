@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +31,9 @@
         <activity android:name=".rsvp.cupcakeapp.CupcakeAppActivity"
             android:exported="false"
             android:theme="@style/Theme.Cupcake"/>
+        <activity android:name=".rsvp.marsphotos.MarsPhotosActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MarsPhotos"/>
 
         <service
             android:name=".job.MyJobService"

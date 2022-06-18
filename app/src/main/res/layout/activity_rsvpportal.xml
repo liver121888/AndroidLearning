@@ -59,6 +59,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_unscrambleapp" />
+    <Button
+        android:id="@+id/btn_marsphotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mars_photos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cupcakeapp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,30 +31,4 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.androidlearning", appContext.getPackageName());
     }
-    //
-    //    @Rule
-    //    public final ServiceTestRule serviceRule = new ServiceTestRule();
-    //    @Test
-    //    public void testWithBoundService() {
-    //        // Create the service Intent.
-    //        Intent serviceIntent =
-    //                new Intent(ApplicationProvider.getApplicationContext(),
-    //                        MyBackgroundService.class);
-    //
-    //        // Data can be passed to the service via the Intent.
-    //        serviceIntent.putExtra(MyBackgroundService.SEED_KEY, 42L);
-    //
-    //        // Bind the service and grab a reference to the binder.
-    //        IBinder binder = serviceRule.bindService(serviceIntent);
-    //
-    //        // Get the reference to the service, or you can call
-    //        // public methods on the binder directly.
-    //        MyBackgroundService service =
-    //                ((MyBackgroundService.LocalBinder) binder).getService();
-    //
-    //        // Verify that the service is working correctly.
-    //        //        assertThat(service.getRandomInt()).isAssignableTo(Integer.class);
-    //    }
-    //
-
 }
