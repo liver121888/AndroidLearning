@@ -8,6 +8,7 @@ import com.example.androidlearning.R
 import com.example.androidlearning.rsvp.affirmations.AffirmationsActivity
 import com.example.androidlearning.rsvp.busschedule.BusScheduleActivity
 import com.example.androidlearning.rsvp.cupcakeapp.CupcakeAppActivity
+import com.example.androidlearning.rsvp.inventoryapp.InventoryAppActivity
 import com.example.androidlearning.rsvp.marsphotos.MarsPhotosActivity
 import com.example.androidlearning.rsvp.sqlbasics.SqlBasicActivity
 import com.example.androidlearning.rsvp.unscrambleapp.UnscrambleAppActivity
@@ -53,6 +54,10 @@ class RsvpPortalActivity : AppCompatActivity() {
         val btnBusSchedule : Button  = findViewById(R.id.btn_busschedule)
         btnBusSchedule.setOnClickListener{
             startActivity(Intent(this, BusScheduleActivity::class.java))
+        }
+        val btnInventoryApp : Button  = findViewById(R.id.btn_inventoryapp)
+        btnInventoryApp.setOnClickListener{
+            startActivity(Intent(this, InventoryAppActivity::class.java))
         }
     }
 }
