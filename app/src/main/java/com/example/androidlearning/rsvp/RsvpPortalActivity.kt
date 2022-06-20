@@ -6,8 +6,10 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidlearning.R
 import com.example.androidlearning.rsvp.affirmations.AffirmationsActivity
+import com.example.androidlearning.rsvp.busschedule.BusScheduleActivity
 import com.example.androidlearning.rsvp.cupcakeapp.CupcakeAppActivity
 import com.example.androidlearning.rsvp.marsphotos.MarsPhotosActivity
+import com.example.androidlearning.rsvp.sqlbasics.SqlBasicActivity
 import com.example.androidlearning.rsvp.unscrambleapp.UnscrambleAppActivity
 import com.example.androidlearning.rsvp.wordsapp.WordsAppActivity
 
@@ -41,8 +43,16 @@ class RsvpPortalActivity : AppCompatActivity() {
             startActivity(Intent(this, CupcakeAppActivity::class.java))
         }
         val btnMarsPhotos : Button  = findViewById(R.id.btn_marsphotos)
-        btnMarsPhotos.setOnClickListener{
+        btnMarsPhotos.setOnClickListener {
             startActivity(Intent(this, MarsPhotosActivity::class.java))
+        }
+        val btnSQLBasics : Button  = findViewById(R.id.btn_sqlbasics)
+            btnSQLBasics.setOnClickListener{
+                startActivity(Intent(this, SqlBasicActivity::class.java))
+        }
+        val btnBusSchedule : Button  = findViewById(R.id.btn_busschedule)
+        btnBusSchedule.setOnClickListener{
+            startActivity(Intent(this, BusScheduleActivity::class.java))
         }
     }
 }
