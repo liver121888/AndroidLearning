@@ -6,6 +6,16 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+        <package android:name="com.example.androidlearning.rsvp.background" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="image/png"/>
+        </intent>
+    </queries>
+
 
 
     <!--        android:name="com.example.androidlearning.rsvp.busschedule.BusScheduleApplication"-->
@@ -53,6 +63,12 @@
             android:exported="false"
             android:label="@string/inventoryapp"
             android:theme="@style/Theme.InventoryApp"/>
+        <activity android:name=".rsvp.background.BlurActivity"
+            android:exported="false"
+            android:label="@string/blurapp"
+            android:theme="@style/AppThemeBackground"/>
+
+
 
         <service
             android:name=".job.MyJobService"

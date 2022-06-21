@@ -106,4 +106,13 @@
         <item name="helperTextTextAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
         </item>
     </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeBackground" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
 </resources>

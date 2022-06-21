@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidlearning.R
 import com.example.androidlearning.rsvp.affirmations.AffirmationsActivity
+import com.example.androidlearning.rsvp.background.BlurActivity
 import com.example.androidlearning.rsvp.busschedule.BusScheduleActivity
 import com.example.androidlearning.rsvp.cupcakeapp.CupcakeAppActivity
 import com.example.androidlearning.rsvp.inventoryapp.InventoryAppActivity
@@ -58,6 +59,10 @@ class RsvpPortalActivity : AppCompatActivity() {
         val btnInventoryApp : Button  = findViewById(R.id.btn_inventoryapp)
         btnInventoryApp.setOnClickListener{
             startActivity(Intent(this, InventoryAppActivity::class.java))
+        }
+        val btnBlurApp : Button  = findViewById(R.id.btn_blurapp)
+        btnBlurApp.setOnClickListener{
+            startActivity(Intent(this, BlurActivity::class.java))
         }
     }
 }
