@@ -9,3 +9,4 @@ rootProject.name = "AndroidLearning"
 include ':app'
 include ':app:repositorypattern'
 include ':app:androidlearning'
+include ':app:busschedule'

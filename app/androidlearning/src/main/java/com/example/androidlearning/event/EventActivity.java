@@ -29,7 +29,7 @@ public class EventActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
         BtnEvent = findViewById(R.id.btn_event);
-        BtnMyEvent = findViewById(R.id.btn_my);
+        //        BtnMyEvent = findViewById(R.id.btn_my);
         BtnHandler = findViewById(R.id.btn_handler);
 
         BtnHandler.setOnClickListener(new View.OnClickListener() {
@@ -41,36 +41,38 @@ public class EventActivity extends AppCompatActivity{
         });
 
         //after long click, if false, OnClick execute
-        BtnMyEvent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("Listener", "LongClick");
-            }
-        });
+        //        BtnMyEvent.setOnClickListener(new View.OnClickListener() {
+        //            @Override
+        //            public void onClick(View view) {
+        //                Log.i("Listener", "onClick");
+        //                ToastUtil.showMsg(EventActivity.this,"onClick.", 1);
+        //            }
+        //        });
 
         //500ms
-        BtnMyEvent.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                Log.i("Listener", "onClick");
-                return false;
-            }
-        });
+        //        BtnMyEvent.setOnLongClickListener(new View.OnLongClickListener() {
+        //            @Override
+        //            public boolean onLongClick(View view) {
+        //                Log.i("Listener", "LongClick");
+        //                ToastUtil.showMsg(EventActivity.this,"onLongClick.", 1);
+        //                return false;
+        //            }
+        //        });
 
         //listener has a higher priority over touch callback
         //100ms
-        BtnMyEvent.setOnTouchListener((view, motionEvent) -> {
-            switch (motionEvent.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    Log.i("Listener", "on touch");
-                    Intent intent = new Intent(EventActivity.this, ButtonActivity.class);
-                    startActivity(intent);
-                    break;
-                default:
-                    break;
-            }
-            return false;
-        });
+        //        BtnMyEvent.setOnTouchListener((view, motionEvent) -> {
+        //            switch (motionEvent.getAction()) {
+        //                case MotionEvent.ACTION_DOWN:
+        //                    Log.i("Listener", "on touch");
+        //                    Intent intent = new Intent(EventActivity.this, ButtonActivity.class);
+        //                    startActivity(intent);
+        //                    break;
+        //                default:
+        //                    break;
+        //            }
+        //            return false;
+        //        });
 
         //listener methods
         //priority: the method set last would work
@@ -98,8 +100,7 @@ public class EventActivity extends AppCompatActivity{
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 Log.i("Activity", "--on touch event");
-                Intent intent = new Intent(EventActivity.this, ButtonActivity.class);
-                startActivity(intent);
+                ToastUtil.showMsg(this,"You have touched me.",1);
                 break;
         }
         return true;

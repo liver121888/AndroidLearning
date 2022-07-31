@@ -8,15 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_event"
-        android:text="click me"/>
+        android:text="click me or touch screen."/>
     <!--write in layout to realize-->
     <!--android:onClick="show"-->
 
-    <com.example.androidlearning.widgets.MyButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_my"
-        android:text="Goto ButtonActivity"/>
+    <!--    <com.example.androidlearning.widgets.MyButton-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/btn_my"-->
+    <!--        android:text="Goto ButtonActivity"/>-->
 
     <Button
         android:layout_width="match_parent"

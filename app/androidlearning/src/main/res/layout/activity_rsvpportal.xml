@@ -65,11 +65,6 @@
             android:layout_height="wrap_content"
             android:text="@string/sql_basics" />
         <Button
-            android:id="@+id/btn_busschedule"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bus_schedule" />
-        <Button
             android:id="@+id/btn_inventoryapp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
